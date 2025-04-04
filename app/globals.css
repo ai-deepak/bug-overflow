@@ -3,21 +3,21 @@
 /* Custom Theme Variables */
 @theme {
   /* Color Palette */
-  --color-primary-100: #FFF1E6;
-  --color-primary-500: #FF7000;
+  --color-primary-100: #fff1e6;
+  --color-primary-500: #ff7000;
 
   --color-dark-100: #000000;
-  --color-dark-200: #0F1117;
+  --color-dark-200: #0f1117;
   --color-dark-300: #151821;
   --color-dark-400: #212734;
   --color-dark-500: #101012;
 
-  --color-light-400: #858EAD;
-  --color-light-500: #7B8EC8;
-  --color-light-700: #DCE3F1;
-  --color-light-800: #F4F6F8;
-  --color-light-850: #FDFDFD;
-  --color-light-900: #FFFFFF;
+  --color-light-400: #858ead;
+  --color-light-500: #7b8ec8;
+  --color-light-700: #dce3f1;
+  --color-light-800: #f4f6f8;
+  --color-light-850: #fdfdfd;
+  --color-light-900: #ffffff;
 
   /* Border Radius */
   --radius: 0.5rem;
@@ -32,9 +32,9 @@
   --shadow-light-100: 0px 12px 20px 0px rgba(184, 184, 184, 0.03),
     0px 6px 12px 0px rgba(184, 184, 184, 0.02),
     0px 2px 4px 0px rgba(184, 184, 184, 0.03);
-  --shadow-light-200: 10px 10px 20px 0px rgba(218, 213, 213, 0.10);
-  --shadow-light-300: -10px 10px 20px 0px rgba(218, 213, 213, 0.10);
-  --shadow-dark-100: 0px 2px 10px 0px rgba(46, 52, 56, 0.10);
+  --shadow-light-200: 10px 10px 20px 0px rgba(218, 213, 213, 0.1);
+  --shadow-light-300: -10px 10px 20px 0px rgba(218, 213, 213, 0.1);
+  --shadow-dark-100: 0px 2px 10px 0px rgba(46, 52, 56, 0.1);
   --shadow-dark-200: 2px 0px 20px 0px rgba(39, 36, 36, 0.04);
 
   /* Breakpoints */
@@ -91,7 +91,8 @@
 
 /* Active Theme */
 .active-theme {
-  filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg) brightness(104%) contrast(106%) !important;
+  filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
+    brightness(104%) contrast(106%) !important;
 }
 
 /* Hash Span */
@@ -157,4 +158,109 @@ code {
 [data-lexical-editor="true"] {
   height: 350px !important;
   overflow-y: auto !important;
+}
+
+@utility background-light850_dark100 {
+  background-color: var(--color-light-850);
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-dark-100);
+  }
+}
+
+@utility background-light900_dark200 {
+  background-color: var(--color-light-900);
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-dark-200);
+  }
+}
+
+@utility h1-bold {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 42px;
+  letter-spacing: -0.05em;
+}
+
+@utility h2-bold {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 31.2px;
+}
+
+@utility h3-bold {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 26px;
+}
+
+@utility paragraph-regular {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+@utility paragraph-medium {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@utility paragraph-semibold {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+@utility body-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+}
+
+@utility body-medium {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22.4px;
+}
+
+@utility body-semibold {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+}
+
+@utility primary-gradient {
+  background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
+}
+
+@utility dark-gradient {
+  background: linear-gradient(
+    232deg,
+    rgba(23, 28, 35, 0.41) 0%,
+    rgba(19, 22, 28, 0.7) 100%
+  );
+}
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@utility flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@utility flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@utility flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
