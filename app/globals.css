@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
+
 /* Custom Theme Variables */
 @theme {
   /* Color Palette */
   --color-primary-100: #fff1e6;
   --color-primary-500: #ff7000;
-
+  --font-body: Inter, sans-serif;
   --color-dark-100: #000000;
   --color-dark-200: #0f1117;
   --color-dark-300: #151821;
@@ -43,6 +44,7 @@
   /* Fonts */
   --font-inter: var(--font-inter);
   --font-space-grotesk: var(--font-space-grotesk);
+
 }
 
 /* Dark Mode Configuration */
@@ -91,8 +93,7 @@
 
 /* Active Theme */
 .active-theme {
-  filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
-    brightness(104%) contrast(106%) !important;
+  filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg) brightness(104%) contrast(106%) !important;
 }
 
 /* Hash Span */
@@ -162,6 +163,7 @@ code {
 
 @utility background-light850_dark100 {
   background-color: var(--color-light-850);
+
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-dark-100);
   }
@@ -169,6 +171,7 @@ code {
 
 @utility background-light900_dark200 {
   background-color: var(--color-light-900);
+
   @media (prefers-color-scheme: dark) {
     background-color: var(--color-dark-200);
   }
@@ -234,11 +237,9 @@ code {
 }
 
 @utility dark-gradient {
-  background: linear-gradient(
-    232deg,
-    rgba(23, 28, 35, 0.41) 0%,
-    rgba(19, 22, 28, 0.7) 100%
-  );
+  background: linear-gradient(232deg,
+      rgba(23, 28, 35, 0.41) 0%,
+      rgba(19, 22, 28, 0.7) 100%);
 }
 
 @utility flex-center {
